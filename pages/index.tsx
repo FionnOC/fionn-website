@@ -1,16 +1,40 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Layout, { siteTitle } from "../components/Layout";
+import Link from "next/link";
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Layout home>
+      <div className="flex min-h-screen flex-col items-center justify-center py-2">
+        <Head>
+          <title>{siteTitle}</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
+        <section>
+          <h3 className="text-3xl leading-normal font-sans">
+            Hi there! Welcome to my website :)
+          </h3>
+          <p>
+            I am a fourth-year student at Trinity College Dublin studying
+            computer engineering who is a well-rounded, positive, and ambitious
+            person.
+          </p>
+          <p>
+            Over the past few years, I have worked in many different roles, from
+            trainee to supervisor, and due to my previous experiences and my
+            computer engineering studies, I have great problem-solving skills.{" "}
+          </p>
+          <p>
+            I am seeking an internship that would allow me to apply my skills
+            and experiences, while also fostering my love for technology.
+          </p>
+          <Link href="/posts/work">Work Experience</Link>
+        </section>
+
+        {/* <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
         <h1 className="text-6xl font-bold">
           Welcome to{" "}
           <a className="text-blue-600" href="https://nextjs.org">
@@ -66,21 +90,20 @@ const Home: NextPage = () => {
             </p>
           </a>
         </div>
-      </main>
+      </main> */}
 
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
-    </div>
+        <footer className="flex h-24 w-full items-center justify-center border-t">
+          <a
+            className="flex items-center justify-center gap-2"
+            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Powered by{" "}
+            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+          </a>
+        </footer>
+      </div>
+    </Layout>
   );
-};
-
-export default Home;
+}

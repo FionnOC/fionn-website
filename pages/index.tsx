@@ -7,27 +7,27 @@ import Link from "next/link";
 export default function Home() {
   return (
     <Layout home>
-      <div className="flex min-h-screen flex-col items-center justify-center py-2">
+      <div className="flex  flex-col items-center justify-center py-2">
         <Head>
           <title>{siteTitle}</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
         <section>
-          <h3 className="text-3xl leading-normal font-sans">
+          <h3 className="text-3xl leading-normal font-sans py-4 text-center">
             Hi there! Welcome to my website :)
           </h3>
-          <p>
+          <p className="my-4">
             I am a fourth-year student at Trinity College Dublin studying
             computer engineering who is a well-rounded, positive, and ambitious
             person.
           </p>
-          <p>
+          <p className="my-4">
             Over the past few years, I have worked in many different roles, from
             trainee to supervisor, and due to my previous experiences and my
             computer engineering studies, I have great problem-solving skills.{" "}
           </p>
-          <p>
+          <p className="my-4">
             I am seeking an internship that would allow me to apply my skills
             and experiences, while also fostering my love for technology.
           </p>

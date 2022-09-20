@@ -13,7 +13,7 @@ type LayoutProps = {
 
 export default function Layout({ children, home }: LayoutProps) {
   return (
-    <div className="max-w-lg p-4 m-12">
+    <div className="flex flex-col  max-w-lg p-4 m-12">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -29,18 +29,23 @@ export default function Layout({ children, home }: LayoutProps) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className="flex flex-col align-center">
+      <header className="flex flex-col items-center">
         {home ? (
           // I think this empty bracket below is what header displays if you are on the home page
           <>
-            <Image
-              priority
-              src="/images/propic.jpg"
-              className="rounded-full"
-              height={144}
-              width={144}
-              alt={name}
-            />
+            {/* <Link href="/">
+             */}
+            <div>
+              <Image
+                priority
+                src="/images/propic.jpg"
+                className="rounded-full"
+                height={144}
+                width={144}
+                alt={name}
+              />
+            </div>
+            {/*</Link> */}
             <h1 className="text-4xl font-extrabold tracking-tighter m-4">
               {name}
             </h1>

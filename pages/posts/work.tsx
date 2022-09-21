@@ -86,7 +86,7 @@ export default function WorkExperience() {
       </div>
       <div className="py-4">
         <h4 className="pb-4 font-semibold italic text-xl">
-          Sept 2017 - Jan 2017, Jun 208 - Jul 2018: <br />
+          Sept 2017 - Jan 2017, Jun 2018 - Jul 2018: <br />
           Pro Shop Assistant, Portmarnock Hotel and Golf Links
         </h4>
         <ul className="text-lg">

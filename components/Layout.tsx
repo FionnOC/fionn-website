@@ -64,7 +64,7 @@ export default function Layout({ children, home }: LayoutProps) {
             </Link>
             <h2 className="text-2xl m-4">
               <Link href="/">
-                <a className="">{name}</a>
+                <a className="text-2xl font-extrabold">{name}</a>
               </Link>
             </h2>
           </>

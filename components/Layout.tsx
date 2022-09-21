@@ -33,18 +33,15 @@ export default function Layout({ children, home }: LayoutProps) {
         {home ? (
           // I think this empty bracket below is what header displays if you are on the home page
           <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/propic.jpg"
-                  className="rounded-full"
-                  height={144}
-                  width={144}
-                  alt={name}
-                />
-              </a>
-            </Link>
+            <Image
+              priority
+              src="/images/propic.jpg"
+              className="rounded-full"
+              height={144}
+              width={144}
+              alt={name}
+            />
+
             <h1 className="text-4xl font-extrabold  m-4">{name}</h1>
           </>
         ) : (

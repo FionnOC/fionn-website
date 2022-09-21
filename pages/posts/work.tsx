@@ -11,7 +11,28 @@ export default function WorkExperience() {
       <h1 className="text-2xl leading-normal font-bold font-sans py-4 text-left">
         Work Experience
       </h1>
-      <div className="pb-4">
+      <div className="py-4">
+        <h4 className="pb-4 font-semibold italic text-xl">
+          Aug 2022 - Sept 2022:
+          <br />
+          Mawla Agency
+        </h4>
+        <ul className="text-lg">
+          <li>
+            Gained experience working with Next.js, and Typescript to make React
+            Components for web applications
+          </li>
+          <li>
+            Took part in attending design meetings and gave feedback on
+            wireframe designs
+          </li>
+          <li>
+            Created documentation to help assist in training clients on how to
+            use the Mawla Engine
+          </li>
+        </ul>
+      </div>
+      <div className="py-4">
         <h4 className="pb-4 font-semibold italic text-xl">
           Jun 2022 - Jul 2022:
           <br />
@@ -26,6 +47,10 @@ export default function WorkExperience() {
           <li>
             Worked alongside Solution Architect to prepare Confluence
             documentation for team to use ahead of project
+          </li>
+          <li>
+            Attended daily scrum, weekly working group, and other client
+            meetings
           </li>
         </ul>
       </div>

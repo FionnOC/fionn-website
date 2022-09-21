@@ -13,7 +13,7 @@ type LayoutProps = {
 
 export default function Layout({ children, home }: LayoutProps) {
   return (
-    <div className="flex flex-col place-items-center max-w-3xl p-4 m-auto">
+    <div className="flex flex-col place-items-center max-w-sm md:max-w-lg lg:max-w-3xl  p-4 m-auto">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -42,7 +42,7 @@ export default function Layout({ children, home }: LayoutProps) {
               alt={name}
             />
 
-            <h1 className="text-4xl font-extrabold  m-4">{name}</h1>
+            <h1 className="text-4xl text-center font-extrabold  m-4">{name}</h1>
           </>
         ) : (
           // therefore, this is what header shows when you are not on the homepage

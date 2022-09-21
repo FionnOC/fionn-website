@@ -15,7 +15,7 @@ export default function Home() {
 
         <section className="">
           <h3 className="text-2xl leading-normal font-bold font-sans py-4 text-center">
-            Hi there! Here's a little bit about me
+            Hi there! A little bit about me
           </h3>
           <div className="text-justify grid grid-cols-1 place-items-center">
             <p className="my-4 text-xl">

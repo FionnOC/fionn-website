@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+import { Footer } from "../components/Footer";
+
 const name = "Fionn O'Connor";
 export const siteTitle = "Fionn's Tailwind Journey";
 
@@ -79,6 +81,7 @@ export default function Layout({ children, home }: LayoutProps) {
           </Link>
         </div>
       )}
+      <Footer />
     </div>
   );
 }

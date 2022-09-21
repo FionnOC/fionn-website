@@ -8,8 +8,13 @@ type FooterProps = {
 
 export const Footer = ({ children }: FooterProps) => {
   return (
-    <Link href="https://github.com/FionnOC">
-      <a className="text-xl hover:underline text-blue-500 pt-8">GitHub</a>
-    </Link>
+    <div className="flex flex-row gap-20">
+      <Link href="https://github.com/FionnOC">
+        <a className="text-xl hover:underline text-blue-500 ">GitHub</a>
+      </Link>
+      <Link href="https://www.linkedin.com/in/fionn-o-connor-1762a3241/">
+        <a className="text-xl hover:underline text-blue-500 ">LinkedIn</a>
+      </Link>
+    </div>
   );
 };

@@ -8,7 +8,7 @@ export default function WorkExperience() {
       <Head>
         <title>Experience</title>
       </Head>
-      <h1 className="text-2xl leading-normal font-bold font-sans py-4 text-left">
+      <h1 className="text-2xl leading-normal font-bold font-sans py-4 text-center">
         Work Experience
       </h1>
       <div className="py-4">

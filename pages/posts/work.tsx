@@ -72,6 +72,29 @@ export default function WorkExperience() {
           </li>
         </ul>
       </div>
+      <div className="py-4">
+        <h4 className="pb-4 font-semibold italic text-xl">
+          Jan 2017 - Apr 2017: <br />
+          Software Engineering Intern, FINEOS
+        </h4>
+        <ul className="text-lg">
+          <li>
+            Test software packages for healthcare providers verifying work of a
+            software team
+          </li>
+        </ul>
+      </div>
+      <div className="py-4">
+        <h4 className="pb-4 font-semibold italic text-xl">
+          Sept 2017 - Jan 2017, Jun 208 - Jul 2018: <br />
+          Pro Shop Assistant, Portmarnock Hotel and Golf Links
+        </h4>
+        <ul className="text-lg">
+          <li>Contribute to daily operational tasks within the shop</li>
+          <li>Operate point of sale software for customers</li>
+          <li>Handle cash, card, and credit transactions</li>
+        </ul>
+      </div>
 
       {/* <h2>
         <Link href="/">Back to home</Link>

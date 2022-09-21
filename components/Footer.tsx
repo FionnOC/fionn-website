@@ -8,7 +8,7 @@ type FooterProps = {
 
 export const Footer = ({ children }: FooterProps) => {
   return (
-    <div className="flex flex-row gap-20">
+    <div className="flex flex-row gap-20 pb-8">
       <Link href="https://github.com/FionnOC">
         <a className="text-xl hover:underline text-blue-500 ">GitHub</a>
       </Link>

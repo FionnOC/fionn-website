@@ -7,31 +7,35 @@ import Link from "next/link";
 export default function Home() {
   return (
     <Layout home>
-      <div className="flex  flex-col items-center justify-center py-2">
+      <div className="flex flex-col items-center justify-center py-2">
         <Head>
           <title>{siteTitle}</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
         <section>
-          <h3 className="text-3xl leading-normal font-sans py-4 text-center">
+          <h3 className="text-2xl leading-normal font-bold font-sans py-4 text-left">
             Hi there! Welcome to my website :)
           </h3>
-          <p className="my-4">
+          <p className="my-4 text-xl">
             I am a fourth-year student at Trinity College Dublin studying
             computer engineering who is a well-rounded, positive, and ambitious
             person.
           </p>
-          <p className="my-4">
+          <p className="my-4 text-xl">
             Over the past few years, I have worked in many different roles, from
             trainee to supervisor, and due to my previous experiences and my
             computer engineering studies, I have great problem-solving skills.{" "}
           </p>
-          <p className="my-4">
+          <p className="my-4 text-xl">
             I am seeking an internship that would allow me to apply my skills
             and experiences, while also fostering my love for technology.
           </p>
-          <Link href="/posts/work">Work Experience</Link>
+          <Link href="/posts/work">
+            <a className="text-xl hover:underline text-blue-500">
+              Work Experience
+            </a>
+          </Link>
         </section>
 
         {/* <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
@@ -93,7 +97,7 @@ export default function Home() {
       </main> */}
 
         <footer className="flex h-24 w-full items-center justify-center border-t">
-          <a
+          {/* <a
             className="flex items-center justify-center gap-2"
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
@@ -101,7 +105,7 @@ export default function Home() {
           >
             Powered by{" "}
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </a>
+          </a> */}
         </footer>
       </div>
     </Layout>

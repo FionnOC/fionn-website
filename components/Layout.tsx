@@ -13,7 +13,7 @@ type LayoutProps = {
 
 export default function Layout({ children, home }: LayoutProps) {
   return (
-    <div className="flex flex-col  max-w-lg p-4 m-12">
+    <div className="flex flex-col place-items-center max-w-2xl p-4 m-auto">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -33,22 +33,19 @@ export default function Layout({ children, home }: LayoutProps) {
         {home ? (
           // I think this empty bracket below is what header displays if you are on the home page
           <>
-            {/* <Link href="/">
-             */}
-            <div>
-              <Image
-                priority
-                src="/images/propic.jpg"
-                className="rounded-full"
-                height={144}
-                width={144}
-                alt={name}
-              />
-            </div>
-            {/*</Link> */}
-            <h1 className="text-4xl font-extrabold tracking-tighter m-4">
-              {name}
-            </h1>
+            <Link href="/">
+              <a>
+                <Image
+                  priority
+                  src="/images/propic.jpg"
+                  className="rounded-full"
+                  height={144}
+                  width={144}
+                  alt={name}
+                />
+              </a>
+            </Link>
+            <h1 className="text-4xl font-extrabold  m-4">{name}</h1>
           </>
         ) : (
           // therefore, this is what header shows when you are not on the homepage
@@ -79,7 +76,7 @@ export default function Layout({ children, home }: LayoutProps) {
 
       {/* if not on home, show the following at the bottom of the page */}
       {!home && (
-        <div className="m-12">
+        <div className="m-12 text-xl hover:underline text-blue-500">
           <Link href="/">
             <a>← Back to home</a>
           </Link>

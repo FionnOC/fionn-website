@@ -13,7 +13,7 @@ type LayoutProps = {
 
 export default function Layout({ children, home }: LayoutProps) {
   return (
-    <div className="flex flex-col place-items-center max-w-2xl p-4 m-auto">
+    <div className="flex flex-col place-items-center max-w-3xl p-4 m-auto">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta

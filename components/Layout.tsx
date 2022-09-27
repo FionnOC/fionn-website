@@ -6,7 +6,7 @@ import React from "react";
 import { Footer } from "../components/Footer";
 
 const name = "Fionn O'Connor";
-export const siteTitle = "Fionn's Tailwind Journey";
+export const siteTitle = "Intro to Fionn";
 
 type LayoutProps = {
   children?: React.ReactNode;

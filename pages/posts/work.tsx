@@ -12,7 +12,7 @@ export default function WorkExperience() {
         Work Experience
       </h1>
       <div className="py-4">
-        <h4 className="pb-4 font-semibold italic text-xl">
+        <h4 className="pb-4 font-semibold  text-xl">
           Aug 2022 - Sept 2022:
           <br />
           Mawla Agency
@@ -33,7 +33,7 @@ export default function WorkExperience() {
         </ul>
       </div>
       <div className="py-4">
-        <h4 className="pb-4 font-semibold italic text-xl">
+        <h4 className="pb-4 font-semibold  text-xl">
           Jun 2022 - Jul 2022:
           <br />
           EY Tech Consulting, Harcourt St, Dublin 2
@@ -55,7 +55,7 @@ export default function WorkExperience() {
         </ul>
       </div>
       <div className="py-4">
-        <h4 className="pb-4 font-semibold italic text-xl">
+        <h4 className="pb-4 font-semibold  text-xl">
           May 2021 - Sept 2021: <br />
           Ticketing Supervisor, Reservations- Westport House Estate, Westport
         </h4>
@@ -73,7 +73,7 @@ export default function WorkExperience() {
         </ul>
       </div>
       <div className="py-4">
-        <h4 className="pb-4 font-semibold italic text-xl">
+        <h4 className="pb-4 font-semibold  text-xl">
           Jan 2017 - Apr 2017: <br />
           Software Engineering Intern, FINEOS
         </h4>
@@ -85,7 +85,7 @@ export default function WorkExperience() {
         </ul>
       </div>
       <div className="py-4">
-        <h4 className="pb-4 font-semibold italic text-xl">
+        <h4 className="pb-4 font-semibold  text-xl">
           Sept 2017 - Jan 2017, Jun 2018 - Jul 2018: <br />
           Pro Shop Assistant, Portmarnock Hotel and Golf Links
         </h4>

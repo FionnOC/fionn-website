@@ -21,14 +21,14 @@ const getSortedPostsData = () => {
     // Combine the data with the id
     return {
       id,
-      ...matterResult.data,
+      data: matterResult.data,
     };
   });
-  // Sort posts by date
-  return allPostsData.sort(({ date: a }, { date: b }) => {
-    if (a < b) {
+
+  return allPostsData.sort((a, b) => {
+    if (a.data.date < b.data.date) {
       return 1;
-    } else if (a > b) {
+    } else if (a.data.date > b.data.date) {
       return -1;
     } else {
       return 0;

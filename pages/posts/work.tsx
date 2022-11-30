@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Head from "next/head";
 import Layout from "../../components/Layout";
 
@@ -95,10 +94,6 @@ export default function WorkExperience() {
           <li>Handle cash, card, and credit transactions</li>
         </ul>
       </div>
-
-      {/* <h2>
-        <Link href="/">Back to home</Link>
-      </h2> */}
     </Layout>
   );
 }

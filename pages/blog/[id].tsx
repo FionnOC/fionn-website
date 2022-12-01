@@ -1,7 +1,5 @@
 import Layout from "../../components/Layout";
-import { useRouter } from "next/router";
-
-import { GetStaticProps, GetStaticPaths } from "next";
+import { getAllPostIds, getPostData } from "../../lib/posts";
 
 // const Post = () => {
 //   const router = useRouter();
@@ -16,14 +14,59 @@ import { GetStaticProps, GetStaticPaths } from "next";
 //
 // export default Post;
 
+/*
+NOTE to fionn
 
-const Post = () => {
-  return <Layout>...</Layout>
+Figured out that all I need to do now is correctly output the contentHtml but finding it difficult
+*/
+
+export type postsDataProps = {
+  postData: {
+    id: string;
+    contentHtml: string;
+    data: { title: string; date: string; data: string };
+  };
 };
 
-async function getStaticPaths() {
-  // Return a list of possible id's
+const Post = ({ postData }: postsDataProps) => {
+  return (
+    <Layout>
+      {postData.data.title}
+      <br />
+      {postData.id}
+      <br />
+      {postData.data.date}
+      {/* <br />
+      {postData.data} */}
+      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+    </Layout>
+  );
+};
+
+// export async function getStaticPaths() {
+//   // Return a list of possible id's
+// }
+
+export async function getStaticPaths() {
+  const paths = getAllPostIds();
+  return {
+    paths,
+    fallback: false,
+  };
 }
 
+export type paramsProps = {
+  params: { id: string; title: string; date: string };
+};
+
+export async function getStaticProps({ params }: paramsProps) {
+  // fetch necessary data for the blog post using params.id
+  const postData = getPostData(params.id);
+  return {
+    props: {
+      postData,
+    },
+  };
+}
 
 export default Post;

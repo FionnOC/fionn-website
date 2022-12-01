@@ -13,7 +13,17 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ allPostsData }) {
+export type ListOfBlogProps = {
+  id: string;
+  title: string;
+  date: string;
+};
+
+export type allPostsDataProps = {
+  allPostsData: [];
+};
+
+export default function Home({ allPostsData }: allPostsDataProps) {
   return (
     <Layout home>
       <div className="flex flex-col py-2">
@@ -58,7 +68,7 @@ export default function Home({ allPostsData }) {
         <section>
           <h2 className="text-3xl">Blog</h2>
           <ul>
-            {allPostsData.map(({ id, date, title }) => (
+            {allPostsData.map(({ id, date, title }: ListOfBlogProps) => (
               <li key={id}>
                 {title}
                 <br />

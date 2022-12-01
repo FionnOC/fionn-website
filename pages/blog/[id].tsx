@@ -24,7 +24,7 @@ export type postsDataProps = {
   postData: {
     id: string;
     contentHtml: string;
-    data: { title: string; date: string; data: string };
+    data: { title: string; date: string };
   };
 };
 
@@ -36,8 +36,7 @@ const Post = ({ postData }: postsDataProps) => {
       {postData.id}
       <br />
       {postData.data.date}
-      {/* <br />
-      {postData.data} */}
+
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
     </Layout>
   );
@@ -56,7 +55,7 @@ export async function getStaticPaths() {
 }
 
 export type paramsProps = {
-  params: { id: string; title: string; date: string };
+  params: { id: string };
 };
 
 export async function getStaticProps({ params }: paramsProps) {

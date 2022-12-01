@@ -3,6 +3,10 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 
+// "devDependencies": {
+//   "@tailwindcss/typography": "^0.5.2",
+// }
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",

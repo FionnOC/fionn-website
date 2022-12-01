@@ -13,17 +13,18 @@ export async function getStaticProps() {
   };
 }
 
-export type ListOfBlogProps = {
-  id: string;
-  title: string;
-  date: string;
-};
+// export type ListOfBlogProps = {
+//   id: string;
+//   title: string;
+//   date: string;
+// };
 
 export type allPostsDataProps = {
-  allPostsData: [];
+  allPostsData: { id: string; title: string; date: string }[];
 };
 
-export default function Home({ allPostsData }: allPostsDataProps) {
+// export default function Home({ allPostsData }: allPostsDataProps) {
+const Home = ({ allPostsData }: allPostsDataProps) => {
   return (
     <Layout home>
       <div className="flex flex-col py-2">
@@ -66,9 +67,9 @@ export default function Home({ allPostsData }: allPostsDataProps) {
           </div>
         </section>
         <section>
-          <h2 className="text-3xl">Blog</h2>
+          <h2 className="text-3xl py-4 font-bold">Blog</h2>
           <ul>
-            {allPostsData.map(({ id, date, title }: ListOfBlogProps) => (
+            {allPostsData?.map(({ id, date, title }) => (
               <li key={id}>
                 {title}
                 <br />
@@ -82,4 +83,6 @@ export default function Home({ allPostsData }: allPostsDataProps) {
       </div>
     </Layout>
   );
-}
+};
+
+export default Home;

@@ -13,7 +13,7 @@ type LayoutProps = {
   home?: boolean;
 };
 
-export default function Layout({ children, home }: LayoutProps) {
+function Layout({ children, home }: LayoutProps) {
   return (
     <div className="flex flex-col place-items-center max-w-xs md:max-w-lg lg:max-w-3xl p-4 m-auto">
       <Head>
@@ -85,3 +85,5 @@ export default function Layout({ children, home }: LayoutProps) {
     </div>
   );
 }
+
+export default Layout;

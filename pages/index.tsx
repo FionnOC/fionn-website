@@ -1,10 +1,19 @@
-import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import Layout, { siteTitle } from "../components/Layout";
 import Link from "next/link";
 
-export default function Home() {
+import { getSortedPostsData } from "../lib/posts";
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
+export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <div className="flex flex-col py-2">
@@ -45,6 +54,20 @@ export default function Home() {
               </a>
             </Link>
           </div>
+        </section>
+        <section>
+          <h2 className="text-3xl">Blog</h2>
+          <ul>
+            {allPostsData.map(({ id, date, title }) => (
+              <li key={id}>
+                {title}
+                <br />
+                {id}
+                <br />
+                {date}
+              </li>
+            ))}
+          </ul>
         </section>
       </div>
     </Layout>

@@ -3,15 +3,27 @@ import { useRouter } from "next/router";
 
 import { GetStaticProps, GetStaticPaths } from "next";
 
-const Post = () => {
-  const router = useRouter();
-  const { id } = router.query;
+// const Post = () => {
+//   const router = useRouter();
+//   const { id } = router.query;
+//
+//   return (
+//     <Layout>
+//       <p>Post: {id}</p>
+//     </Layout>
+//   );
+// };
+//
+// export default Post;
 
-  return (
-    <Layout>
-      <p>Post: {id}</p>
-    </Layout>
-  );
+
+const Post = () => {
+  return <Layout>...</Layout>
 };
+
+async function getStaticPaths() {
+  // Return a list of possible id's
+}
+
 
 export default Post;

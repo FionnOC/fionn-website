@@ -20,7 +20,7 @@ export const getSortedPostsData = () => {
 
     const data = matterResult.data;
     const title: string = data.title;
-    const date = data.date;
+    const date: string = data.date;
 
     // Combine the data with the id
     return {

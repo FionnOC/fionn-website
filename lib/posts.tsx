@@ -1,6 +1,8 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { remark } from "remark";
+import html from "remark-html";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
@@ -25,16 +27,16 @@ export const getSortedPostsData = () => {
     // Combine the data with the id
     return {
       id,
-      title,
-      date,
+      // title,
+      // date,
       data,
     };
   });
 
   return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
+    if (a.data.date < b.data.date) {
       return 1;
-    } else if (a.date > b.date) {
+    } else if (a.data.date > b.data.date) {
       return -1;
     } else {
       return 0;
@@ -71,7 +73,7 @@ export function getAllPostIds() {
 // NOTE TO FIONN:
 
 // Figure out how to define what tyoe ID is here
-export function getPostData(id: string) {
+export async function getPostData(id: string) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
@@ -79,9 +81,17 @@ export function getPostData(id: string) {
   const matterResult = matter(fileContents);
 
   const data = matterResult.data;
+
+  const processedContent = await remark()
+    .use(html)
+    .process(matterResult.content);
+
+  const contentHtml: string = processedContent.toString();
+
   // Combine the data with the id
   return {
     id,
+    contentHtml,
     data,
   };
 }

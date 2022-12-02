@@ -11,9 +11,10 @@ export const siteTitle = "Intro to Fionn";
 type LayoutProps = {
   children?: React.ReactNode;
   home?: boolean;
+  blog?: boolean;
 };
 
-function Layout({ children, home }: LayoutProps) {
+function Layout({ children, home, blog }: LayoutProps) {
   return (
     <div className="flex flex-col place-items-center max-w-xs md:max-w-lg lg:max-w-3xl p-4 m-auto">
       <Head>
@@ -73,14 +74,23 @@ function Layout({ children, home }: LayoutProps) {
       {/* I think children here is then basically just what is the first-post.tsx file */}
       <main>{children}</main>
 
+      {!blog && !home && (
+        <div className=" text-xl hover:underline text-blue-500">
+          <Link href="/posts/blog">
+            <a>← Back to blog</a>
+          </Link>
+        </div>
+      )}
+
       {/* if not on home, show the following at the bottom of the page */}
       {!home && (
-        <div className="m-12 text-xl hover:underline text-blue-500">
+        <div className="m-8 text-xl hover:underline text-blue-500">
           <Link href="/">
             <a>← Back to home</a>
           </Link>
         </div>
       )}
+
       <Footer />
     </div>
   );

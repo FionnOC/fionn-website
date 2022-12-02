@@ -19,15 +19,15 @@ export type allPostsDataProps = {
 
 const blog = ({ allPostsData }: allPostsDataProps) => {
   return (
-    <Layout>
+    <Layout blog>
       <Head>
-        <title>Bloggin'</title>
+        <title>Fionn's Blog</title>
       </Head>
       <section>
         <h2 className="text-3xl py-4 font-bold">Blog</h2>
         <ul>
           {allPostsData?.map(({ id, data }) => (
-            <li key={id}>
+            <li key={id} className="pb-4">
               <div className="text-xl hover:underline text-blue-500">
                 <Link href={`/posts/blog/${id}`}>{data.title}</Link>
               </div>

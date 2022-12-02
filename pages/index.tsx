@@ -5,27 +5,14 @@ import Date from "../components/date";
 
 import { getSortedPostsData } from "../lib/posts";
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-}
-
 // export type ListOfBlogProps = {
 //   id: string;
 //   title: string;
 //   date: string;
 // };
 
-export type allPostsDataProps = {
-  allPostsData: { id: string; data: { title: string; date: string } }[];
-};
-
 // export default function Home({ allPostsData }: allPostsDataProps) {
-const Home = ({ allPostsData }: allPostsDataProps) => {
+const Home = ({}) => {
   return (
     <Layout home>
       <div className="flex flex-col py-2">
@@ -38,7 +25,7 @@ const Home = ({ allPostsData }: allPostsDataProps) => {
           <h3 className="text-2xl leading-normal font-bold font-sans py-4 text-center">
             Hi there! A little bit about me ...
           </h3>
-          <div className="text-justify grid grid-cols-1 place-items-center">
+          <div className="mb-4 text-justify grid grid-cols-1 place-items-center">
             <p className="my-4 text-xl">
               I am a fourth-year student at Trinity College Dublin studying
               computer engineering who is a well-rounded, positive, and
@@ -65,22 +52,12 @@ const Home = ({ allPostsData }: allPostsDataProps) => {
                 Work Experience
               </a>
             </Link>
+            <Link href="/posts/blog">
+              <a className="text-xl hover:underline text-blue-500 pt-4">
+                Visit my Blog!
+              </a>
+            </Link>
           </div>
-        </section>
-        <section>
-          <h2 className="text-3xl py-4 font-bold">Blog</h2>
-          <ul>
-            {allPostsData?.map(({ id, data }) => (
-              <li key={id}>
-                <div className="text-xl hover:underline text-blue-500">
-                  <Link href={`/blog/${id}`}>{data.title}</Link>
-                </div>
-                <small>
-                  <Date dateString={data.date} />
-                </small>
-              </li>
-            ))}
-          </ul>
         </section>
       </div>
     </Layout>

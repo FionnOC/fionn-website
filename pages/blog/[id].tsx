@@ -37,7 +37,6 @@ const Post = ({ postData }: postsDataProps) => {
       <Head>
         <title>{postData.data.title}</title>
       </Head>
-
       <div className="pt-4">
         <div className="text-left">
           <div className="text-2xl font-bold">{postData.data.title}</div>

@@ -1,5 +1,5 @@
 ---
-title: "How I Made This Website"
+title: "Why I Decided to Make This Website"
 date: "2022-12-02"
 ---
 

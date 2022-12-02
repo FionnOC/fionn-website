@@ -26,18 +26,18 @@ const Home = ({}) => {
             Hi there! A little bit about me ...
           </h3>
           <div className="mb-4 text-justify grid grid-cols-1 place-items-center">
-            <p className="my-4 text-xl">
+            <p className="my-4 text-lg">
               I am a fourth-year student at Trinity College Dublin studying
               computer engineering who is a well-rounded, positive, and
               ambitious person.
             </p>
-            <p className="my-4 text-xl">
+            <p className="my-4 text-lg">
               Over the past few years, I have worked in many different roles,
               from trainee to supervisor, and due to my previous experiences and
               my computer engineering studies, I have great problem-solving
               skills.
             </p>
-            <p className="my-4 text-xl">
+            <p className="my-4 text-lg">
               I have many other interests apart from computer engineering. I
               have been playing the fiddle for the past 13 years; playing in the
               Fleadh in a céilí band, and also solo. <br />I am an avid climber,

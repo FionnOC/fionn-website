@@ -21,8 +21,8 @@ export const getSortedPostsData = () => {
     const matterResult = matter(fileContents);
 
     const data = matterResult.data;
-    const title: string = data.title;
-    const date: string = data.date;
+    // const title: string = data.title;
+    // const date: string = data.date;
 
     // Combine the data with the id
     return {

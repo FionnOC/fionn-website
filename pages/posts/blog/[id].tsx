@@ -46,8 +46,8 @@ const Post = ({ postData }: postsDataProps) => {
 
           <hr />
         </div>
-        <article
-          className="prose lg:prose-xl py-8"
+        <div
+          className="prose lg:prose-lg py-8"
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
       </div>

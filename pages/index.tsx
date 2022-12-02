@@ -72,8 +72,9 @@ const Home = ({ allPostsData }: allPostsDataProps) => {
           <ul>
             {allPostsData?.map(({ id, data }) => (
               <li key={id}>
-                <Link href={`/blog/${id}`}>{data.title}</Link>
-                <br />
+                <div className="text-xl hover:underline text-blue-500">
+                  <Link href={`/blog/${id}`}>{data.title}</Link>
+                </div>
                 <small>
                   <Date dateString={data.date} />
                 </small>

@@ -86,7 +86,7 @@ function Layout({ children, home, blog, work }: LayoutProps) {
 
       {/* if not on home, show the following at the bottom of the page */}
       {!home && (
-        <div className="m-8 text-xl hover:underline text-blue-500">
+        <div className="pb-8 pt-4 text-xl hover:underline text-blue-500">
           <Link href="/">
             <a>← Back to home</a>
           </Link>

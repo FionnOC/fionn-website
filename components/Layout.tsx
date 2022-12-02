@@ -71,7 +71,7 @@ function Layout({ children, home }: LayoutProps) {
       </header>
 
       {/* I think children here is then basically just what is the first-post.tsx file */}
-      <main className="pb-4">{children}</main>
+      <main>{children}</main>
 
       {/* if not on home, show the following at the bottom of the page */}
       {!home && (

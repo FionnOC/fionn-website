@@ -16,7 +16,7 @@ export default function WorkExperience() {
           <br />
           Mawla Agency
         </h4>
-        <ul className="text-lg">
+        <ul className="text-lg list-disc">
           <li>
             Gained experience working with Next.js, and Typescript to make React
             Components for web applications
@@ -37,7 +37,7 @@ export default function WorkExperience() {
           <br />
           EY Tech Consulting, Harcourt St, Dublin 2
         </h4>
-        <ul className="text-lg">
+        <ul className="text-lg list-disc">
           <li>Assist in PMO work as part of a multi team project</li>
           <li>
             Recieved official training to prepare to take PSM 1 and PSPO 1
@@ -58,7 +58,7 @@ export default function WorkExperience() {
           May 2021 - Sept 2021: <br />
           Ticketing Supervisor, Reservations- Westport House Estate, Westport
         </h4>
-        <ul className="text-lg">
+        <ul className="text-lg list-disc">
           <li>Liase with customers upon entry to park</li>
           <li>Handle complaints and resolve issues</li>
           <li>
@@ -72,11 +72,11 @@ export default function WorkExperience() {
         </ul>
       </div>
       <div className="py-4">
-        <h4 className="pb-4 font-semibold  text-xl">
+        <h4 className="pb-4 font-semibold text-xl">
           Jan 2017 - Apr 2017: <br />
           Software Engineering Intern, FINEOS
         </h4>
-        <ul className="text-lg">
+        <ul className="text-lg list-disc">
           <li>
             Test software packages for healthcare providers verifying work of a
             software team
@@ -84,11 +84,11 @@ export default function WorkExperience() {
         </ul>
       </div>
       <div className="py-4">
-        <h4 className="pb-4 font-semibold  text-xl">
+        <h4 className="pb-4 font-semibold text-xl">
           Sept 2017 - Jan 2017, Jun 2018 - Jul 2018: <br />
           Pro Shop Assistant, Portmarnock Hotel and Golf Links
         </h4>
-        <ul className="text-lg">
+        <ul className="text-lg list-disc">
           <li>Contribute to daily operational tasks within the shop</li>
           <li>Operate point of sale software for customers</li>
           <li>Handle cash, card, and credit transactions</li>

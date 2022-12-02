@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/Layout";
 import Link from "next/link";
+import Date from "../components/date";
 
 import { getSortedPostsData } from "../lib/posts";
 
@@ -20,7 +21,7 @@ export async function getStaticProps() {
 // };
 
 export type allPostsDataProps = {
-  allPostsData: { id: string; title: string; date: string }[];
+  allPostsData: { id: string; data: { title: string; date: string } }[];
 };
 
 // export default function Home({ allPostsData }: allPostsDataProps) {
@@ -69,13 +70,13 @@ const Home = ({ allPostsData }: allPostsDataProps) => {
         <section>
           <h2 className="text-3xl py-4 font-bold">Blog</h2>
           <ul>
-            {allPostsData?.map(({ id, date, title }) => (
+            {allPostsData?.map(({ id, data }) => (
               <li key={id}>
-                {title}
+                <Link href={`/blog/${id}`}>{data.title}</Link>
                 <br />
-                {id}
-                <br />
-                {date}
+                <small>
+                  <Date dateString={data.date} />
+                </small>
               </li>
             ))}
           </ul>

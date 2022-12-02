@@ -12,9 +12,10 @@ type LayoutProps = {
   children?: React.ReactNode;
   home?: boolean;
   blog?: boolean;
+  work?: boolean;
 };
 
-function Layout({ children, home, blog }: LayoutProps) {
+function Layout({ children, home, blog, work }: LayoutProps) {
   return (
     <div className="flex flex-col place-items-center max-w-xs md:max-w-lg lg:max-w-3xl p-4 m-auto">
       <Head>
@@ -74,7 +75,8 @@ function Layout({ children, home, blog }: LayoutProps) {
       {/* I think children here is then basically just what is the first-post.tsx file */}
       <main>{children}</main>
 
-      {!blog && !home && (
+      {/* if on blog post, and not on home and not on work   */}
+      {!blog && !home && !work && (
         <div className=" text-xl hover:underline text-blue-500">
           <Link href="/posts/blog">
             <a>← Back to blog</a>

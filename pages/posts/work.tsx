@@ -3,7 +3,7 @@ import Layout from "../../components/Layout";
 
 export default function WorkExperience() {
   return (
-    <Layout>
+    <Layout work>
       <Head>
         <title>Experience</title>
       </Head>

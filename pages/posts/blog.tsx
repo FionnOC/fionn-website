@@ -28,7 +28,7 @@ const blog = ({ allPostsData }: allPostsDataProps) => {
         <ul>
           {allPostsData?.map(({ id, data }) => (
             <li key={id} className="pb-4">
-              <div className="text-xl hover:underline text-blue-500">
+              <div className=" text-md lg:text-xl hover:underline text-blue-500">
                 <Link href={`/posts/blog/${id}`}>{data.title}</Link>
               </div>
               <small>

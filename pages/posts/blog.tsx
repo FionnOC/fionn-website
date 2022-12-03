@@ -21,7 +21,7 @@ const blog = ({ allPostsData }: allPostsDataProps) => {
   return (
     <Layout blog>
       <Head>
-        <title>Fionn's Blog</title>
+        <title>Fionn Blog</title>
       </Head>
       <section>
         <h2 className="text-3xl py-4 font-bold">Blog</h2>

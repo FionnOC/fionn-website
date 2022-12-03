@@ -23,4 +23,4 @@ I really want to practice my design skills, so by creating new designs in Figma 
 - Some colour!
 - Maybe a fun nav bar that slides away when not in use
 
-I'll keep this blog updated as I continue! Please reach out if you have any suggestions. My email is fionn010@gmail.com :)
+I'll keep this blog updated as I continue! Please reach out if you have any suggestions :)

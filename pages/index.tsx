@@ -27,8 +27,8 @@ const Home = ({}) => {
           </h3>
           <div className="mb-4 text-justify grid grid-cols-1 place-items-center">
             <p className="my-4 text-lg">
-              I am a masters student at Trinity College Dublin studying computer
-              engineering who is a well-rounded, positive, and ambitious person.
+              I am a Masters student at Trinity College Dublin studying Computer
+              Engineering who is a well-rounded, positive, and ambitious person.
             </p>
             <p className="my-4 text-lg">
               Over the past few years, I have worked in many different roles,

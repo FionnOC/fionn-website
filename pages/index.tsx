@@ -27,35 +27,43 @@ const Home = ({}) => {
           </h3>
           <div className="mb-4 text-justify grid grid-cols-1 place-items-center">
             <p className="my-4 text-lg">
-              I am a Masters student at Trinity College Dublin studying Computer
-              Engineering who is a well-rounded, positive, and ambitious person.
+              Masters student at Trinity College Dublin studying Computer
+              Engineering who is a passionate, hard-working, people person with
+              technical skills.
             </p>
             <p className="my-4 text-lg">
-              Over the past few years, I have worked in many different roles,
-              from trainee to supervisor, and due to my previous experiences and
-              my computer engineering studies, I have great problem-solving
-              skills.
+              Worked in many different industries and roles, from trainee to
+              supervisor, and due to my previous experiences and my computer
+              engineering studies, I have strong leadership skills.
             </p>
             <p className="my-4 text-lg">
-              I have many other interests apart from computer engineering. I
-              have been playing the fiddle for the past 13 years; playing in the
-              Fleadh in a céilí band, and also solo. <br />I am an avid climber,
-              and try to boulder as much as possible; I am an active member in
-              the Trinity Climbing Club. <br />
-              Film photography is a huge hobby of mine, and I love to take
-              photos of friends and family whenever I can!
+              Many other interests apart from computer engineering - have played
+              the fiddle for the past 13 years; playing weekly in sessions in
+              Dublin and in the Fleadh in a céilí band, and also solo.
+            </p>
+            <p className="my-4 text-lg">
+              Avid climber, and try to boulder as much as possible; Active
+              member in the Trinity Climbing Club. Love to take photos of
+              friends and family and travel whenever I can!
             </p>
 
-            <Link href="/posts/work">
-              <a className="text-xl hover:underline text-blue-500 pt-4">
-                Work Experience
-              </a>
-            </Link>
-            <Link href="/posts/blog">
-              <a className="text-xl hover:underline text-blue-500 pt-4">
-                Visit my Blog!
-              </a>
-            </Link>
+            <div className="flex">
+              <Link href="/posts/work">
+                <a className="text-xl hover:underline text-blue-500 p-4">
+                  Work Experience
+                </a>
+              </Link>
+              <Link href="/posts/projects">
+                <a className="text-xl hover:underline text-blue-500 p-4">
+                  College Projects
+                </a>
+              </Link>
+              <Link href="/posts/blog">
+                <a className="text-xl hover:underline text-blue-500 p-4">
+                  Visit my Blog!
+                </a>
+              </Link>
+            </div>
           </div>
         </section>
       </div>

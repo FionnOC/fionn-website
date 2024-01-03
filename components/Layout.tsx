@@ -13,9 +13,12 @@ type LayoutProps = {
   home?: boolean;
   blog?: boolean;
   work?: boolean;
+  projects?: boolean;
 };
 
-function Layout({ children, home, blog, work }: LayoutProps) {
+function Layout({ children, home, blog, work, projects }: LayoutProps) {
+  // const maxWidthClass = work ? "lg:max-w-7xl" : "lg:max-w-3xl"; // Adjust the width as needed
+
   return (
     <div className="flex flex-col place-items-center max-w-xs md:max-w-lg lg:max-w-3xl p-4 m-auto">
       <Head>
@@ -76,7 +79,7 @@ function Layout({ children, home, blog, work }: LayoutProps) {
       <main>{children}</main>
 
       {/* if on blog post, and not on home and not on work   */}
-      {!blog && !home && !work && (
+      {!blog && !home && !work && !projects && (
         <div className=" text-xl hover:underline text-blue-500">
           <Link href="/posts/blog">
             <a>← Back to blog</a>

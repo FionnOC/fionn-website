@@ -27,9 +27,9 @@ const Home = ({}) => {
           </h3>
           <div className="mb-4 text-justify grid grid-cols-1 place-items-center">
             <p className="my-4 text-lg">
-              Masters student at Trinity College Dublin studying Computer
-              Engineering who is a passionate, hard-working, people person with
-              technical skills.
+              I am a recent graduate of Trinity College Dublin, completing a
+              masters in Computer Engineering, who is a well-rounded, positive,
+              and ambitious person.
             </p>
             <p className="my-4 text-lg">
               Worked in many different industries and roles, from trainee to
@@ -37,14 +37,12 @@ const Home = ({}) => {
               engineering studies, I have strong leadership skills.
             </p>
             <p className="my-4 text-lg">
-              Many other interests apart from computer engineering - have played
-              the fiddle for the past 13 years; playing weekly in sessions in
-              Dublin and in the Fleadh in a céilí band, and also solo.
-            </p>
-            <p className="my-4 text-lg">
-              Avid climber, and try to boulder as much as possible; Active
-              member in the Trinity Climbing Club. Love to take photos of
-              friends and family and travel whenever I can!
+              I have many other interests apart from computer engineering. I
+              have been playing the fiddle for the past 13 years; playing in the
+              Fleadh in a céilí band, and also solo. <br />I am an avid climber,
+              and try to boulder as much as possible. <br />
+              Film photography is a huge hobby of mine, and I love to take
+              photos of friends and family whenever I can!
             </p>
 
             <div className="flex">

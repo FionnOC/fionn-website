@@ -5,16 +5,69 @@ import Link from "next/link";
 export default function Projects() {
   return (
     <Layout projects>
-      <Head>Projects</Head>
+      <Head>
+        <title>Projects</title>
+      </Head>
       <h1 className="text-2xl leading-normal font-bold font-sans py-4 text-center">
-        College Projects
+        Projects
       </h1>
       <div>
-        <h4 className="pb-4 font-semibold  text-xl">Furnishare</h4>
+        <h4 className="pb-4 font-semibold text-xl">
+          PartyBot: IoT Speech-Recognition Party Game
+        </h4>
+        <Link href="https://fergalriordan.com/projects/partybot.html">
+          <a className="text-xl hover:underline text-blue-500 pt-4">
+            Project Write-up
+          </a>
+        </Link>
+        <br />
+        <br />
         <ul className="text-lg list-disc">
           <li>
-            Lead team of 22 developing a marketplace app over the course of 8
-            weeks
+            A device that listens to conversation, detects banned words using
+            on-device speech recognition, then sounds an alarm and points at
+            whoever said it. Built by a team of 6
+          </li>
+          <li>
+            Built the AWS cloud integration end-to-end: 3 event-driven Lambda
+            functions and 2 S3 buckets pushing UI-selected word lists to
+            on-device model updates over IoT Core/MQTT, plus live per-player
+            detection stats
+          </li>
+          <li>
+            Tuned on-device speech recognition (WakeNet, MultiNet), improving
+            detection accuracy and fixing a default-language defect
+          </li>
+          <li>
+            <strong>Tools Used:</strong> AWS (IoT Core, Lambda, S3), MQTT,
+            ESP32, React
+          </li>
+        </ul>
+      </div>
+      <br />
+      <div>
+        <h4 className="pb-4 font-semibold text-xl">
+          Masters Research: Humour Perception using EEG
+        </h4>
+        <ul className="text-lg list-disc">
+          <li>
+            Studied the neurophysiology of humour perception using EEG and
+            Temporal Response Functions recorded while participants watched
+            comedy shows
+          </li>
+          <li>
+            <strong>Tools Used:</strong> MATLAB, EEG, Praat, Univariate and
+            Multivariate Models
+          </li>
+        </ul>
+      </div>
+      <br />
+      <div>
+        <h4 className="pb-4 font-semibold text-xl">FurniShare</h4>
+        <ul className="text-lg list-disc">
+          <li>
+            Led a team of 22 engineers developing a second-hand furniture
+            marketplace app for iOS and Android over 8 weeks
           </li>
           <li>
             <strong>Tools Used:</strong> React Native, Firebase, Figma, GitHub,
@@ -24,7 +77,7 @@ export default function Projects() {
       </div>
       <br />
       <div>
-        <h4 className="pb-4 font-semibold  text-xl">Weather Application</h4>
+        <h4 className="pb-4 font-semibold text-xl">Weather Application</h4>
         <ul className="text-lg list-disc">
           <li>
             Created a Weather App which advises users on weather and air quality
@@ -38,9 +91,7 @@ export default function Projects() {
       </div>
       <br />
       <div>
-        <h4 className="pb-4 font-semibold  text-xl">
-          Dublin Bikes Application
-        </h4>
+        <h4 className="pb-4 font-semibold text-xl">Dublin Bikes Application</h4>
         <ul className="text-lg list-disc">
           <li>
             Created a Dublin Cycling App, which shows user location, and the
@@ -57,7 +108,7 @@ export default function Projects() {
       </div>
       <br />
       <div>
-        <h4 className="pb-4 font-semibold  text-xl">
+        <h4 className="pb-4 font-semibold text-xl">
           Teaching Morse Code via Game using Pi Pico and ARM Assembly
         </h4>
         <Link href="https://drive.google.com/file/d/1iUPKXk5Ci0WRTKb8-vNAySn2O84ZSWW-/view?usp=sharing">

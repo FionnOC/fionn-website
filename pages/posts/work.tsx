@@ -11,87 +11,116 @@ export default function WorkExperience() {
         Work Experience
       </h1>
       <div className="py-4">
-        <h4 className="pb-4 font-semibold  text-xl">
-          Aug 2022 - Sept 2022:
+        <h4 className="pb-4 font-semibold text-xl">
+          Mar 2025 - Present:
           <br />
-          Mawla Agency
+          AI Engineer, Siemens Healthineers
         </h4>
         <ul className="text-lg list-disc">
           <li>
-            Gained experience working with Next.js, and Typescript to make React
-            Components for web applications
+            Re-architected a serial inference pipeline into a parallelised
+            Pandas workflow, cutting end-to-end runtime (file read, processing,
+            ONNX inference) by ~9.1x for a 200-file batch (38.6s to 4.2s)
           </li>
           <li>
-            Took part in attending design meetings and gave feedback on
-            wireframe designs
+            Owned two epics to capture and analyse new trace data from field
+            instruments, closing a 20-year data gap; selected as subject matter
+            expert
           </li>
           <li>
-            Created documentation to help assist in training clients on how to
-            use the Mawla Engine
+            Built statistical anomaly and drift detection on field instrument
+            trace data to flag irregular behaviour and degradation, and
+            presented the findings to managers and cross-functional teams
+          </li>
+          <li>
+            Developing a custom spaCy NER model to detect PII in field service
+            notifications for EU compliance, with ~400 manually labelled samples
           </li>
         </ul>
       </div>
       <div className="py-4">
-        <h4 className="pb-4 font-semibold  text-xl">
+        <h4 className="pb-4 font-semibold text-xl">
+          Aug 2024 - Mar 2025:
+          <br />
+          Research Assistant, Trinity College Dublin
+        </h4>
+        <ul className="text-lg list-disc">
+          <li>Carried out EEG experiments as part of a PhD research project</li>
+          <li>Aided with data preprocessing using MATLAB</li>
+        </ul>
+      </div>
+      <div className="py-4">
+        <h4 className="pb-4 font-semibold text-xl">
+          Aug 2022 - Oct 2022:
+          <br />
+          Software Engineering Intern, Mawla Agency
+        </h4>
+        <ul className="text-lg list-disc">
+          <li>
+            Built React/Next.js and TypeScript components for client web
+            applications; contributed to design reviews and client-facing
+            documentation
+          </li>
+        </ul>
+      </div>
+      <div className="py-4">
+        <h4 className="pb-4 font-semibold text-xl">
           Jun 2022 - Jul 2022:
           <br />
-          EY Tech Consulting, Harcourt St, Dublin 2
+          Tech Consultant, EY, Dublin
         </h4>
         <ul className="text-lg list-disc">
-          <li>Assist in PMO work as part of a multi team project</li>
           <li>
-            Recieved official training to prepare to take PSM 1 and PSPO 1
-            certificate exams
-          </li>
-          <li>
-            Worked alongside Solution Architect to prepare Confluence
-            documentation for team to use ahead of project
-          </li>
-          <li>
-            Attended daily scrum, weekly working group, and other client
-            meetings
+            Supported the project management workstream on a multi-team client
+            engagement; prepared Confluence documentation alongside the Solution
+            Architect
           </li>
         </ul>
       </div>
       <div className="py-4">
-        <h4 className="pb-4 font-semibold  text-xl">
-          May 2021 - Sept 2021: <br />
-          Ticketing Supervisor, Reservations- Westport House Estate, Westport
-        </h4>
+        <h4 className="pb-4 font-semibold text-xl">Earlier Experience</h4>
         <ul className="text-lg list-disc">
-          <li>Liase with customers upon entry to park</li>
-          <li>Handle complaints and resolve issues</li>
           <li>
-            Lead staff teams of up to 10 employees, providing increased
-            communication and insight
+            Ticketing Supervisor, Westport House Estate (2021): led staff teams
+            of up to 10
           </li>
           <li>
-            Receive and control stock levels through communication with internal
-            and external stakeholders
+            Software Engineering Intern, FINEOS (2017): tested software packages
+            for healthcare providers
+          </li>
+          <li>Pro Shop Assistant, Portmarnock Hotel and Golf Links (2017-2018)</li>
+        </ul>
+      </div>
+
+      <h1 className="text-2xl leading-normal font-bold font-sans py-4 text-center">
+        Education
+      </h1>
+      <div className="py-4">
+        <h4 className="pb-4 font-semibold text-xl">
+          Sept 2019 - May 2024:
+          <br />
+          MEng Computer Engineering, Trinity College Dublin
+        </h4>
+        <ul className="text-lg list-disc">
+          <li>First Class Honours (1.1)</li>
+          <li>
+            Modules included deep learning, probability and statistics,
+            information retrieval, and knowledge and data engineering
           </li>
         </ul>
       </div>
       <div className="py-4">
         <h4 className="pb-4 font-semibold text-xl">
-          Jan 2017 - Apr 2017: <br />
-          Software Engineering Intern, FINEOS
+          Feb 2023 - Jul 2023:
+          <br />
+          Erasmus Exchange, MSc Artificial Intelligence, KU Leuven, Belgium
         </h4>
         <ul className="text-lg list-disc">
+          <li>First Class Honours (1.1)</li>
           <li>
-            Test software packages for healthcare providers verifying work of a
-            software team
+            Modules included speech recognition, artificial neural networks,
+            SVMs, biometrics, and computer vision
           </li>
-        </ul>
-      </div>
-      <div className="py-4">
-        <h4 className="pb-4 font-semibold text-xl">
-          Sept 2017 - Jan 2017, Jun 2018 - Jul 2018: <br />
-          Pro Shop Assistant, Portmarnock Hotel and Golf Links
-        </h4>
-        <ul className="text-lg list-disc">
-          <li>Contribute to daily operational tasks within the shop</li>
-          <li>Operate point of sale software for customers</li>
-          <li>Handle cash, card, and credit transactions</li>
         </ul>
       </div>
     </Layout>

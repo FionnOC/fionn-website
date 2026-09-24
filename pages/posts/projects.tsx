@@ -15,11 +15,6 @@ export default function Projects() {
         <h4 className="pb-4 font-semibold text-xl">
           PartyBot: IoT Speech-Recognition Party Game
         </h4>
-        <Link href="https://fergalriordan.com/projects/partybot.html">
-          <a className="text-xl hover:underline text-blue-500 pt-4">
-            Project Write-up
-          </a>
-        </Link>
         <br />
         <br />
         <ul className="text-lg list-disc">

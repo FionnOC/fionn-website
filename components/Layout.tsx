@@ -6,6 +6,9 @@ import React from "react";
 import { Footer } from "../components/Footer";
 
 const name = "Fionn O'Connor";
+const siteUrl = "https://fionn-oconnor.vercel.app";
+const description =
+  "Fionn O'Connor, AI Engineer building production ML and data pipelines. Experience, projects, and CV.";
 export const siteTitle = "Fionn O'Connor – AI Engineer";
 
 type LayoutProps = {
@@ -17,23 +20,20 @@ type LayoutProps = {
 };
 
 function Layout({ children, home, blog, work, projects }: LayoutProps) {
-  // const maxWidthClass = work ? "lg:max-w-7xl" : "lg:max-w-3xl"; // Adjust the width as needed
-
   return (
-    <div className="flex flex-col place-items-center max-w-xs md:max-w-lg lg:max-w-3xl p-4 m-auto">
+    <div className="flex flex-col place-items-center w-full max-w-3xl px-4 py-4 m-auto">
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Fionn O'Connor, AI Engineer at Siemens Healthineers. Work experience, projects, and blog."
-        />
-        <meta property="og:image" content="/images/propic.jpg" />
-        <meta name="og:title" content={siteTitle} />
+        <meta name="description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={siteTitle} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={`${siteUrl}/images/propic.jpg`} />
+        <meta property="og:url" content={siteUrl} />
         <meta name="twitter:card" content="summary" />
       </Head>
       <header className="flex flex-col items-center">
         {home ? (
-          // I think this empty bracket below is what header displays if you are on the home page
           <>
             <Image
               priority
@@ -43,11 +43,9 @@ function Layout({ children, home, blog, work, projects }: LayoutProps) {
               width={144}
               alt={name}
             />
-
-            <h1 className="text-4xl text-center font-extrabold  m-4">{name}</h1>
+            <h1 className="text-4xl text-center font-extrabold m-4">{name}</h1>
           </>
         ) : (
-          // therefore, this is what header shows when you are not on the homepage
           <>
             <Link href="/">
               <a>
@@ -61,30 +59,28 @@ function Layout({ children, home, blog, work, projects }: LayoutProps) {
                 />
               </a>
             </Link>
-            <h2 className="text-2xl m-4">
+            <p className="text-2xl m-4">
               <Link href="/">
                 <a className="text-2xl font-extrabold">{name}</a>
               </Link>
-            </h2>
+            </p>
           </>
         )}
       </header>
 
-      {/* I think children here is then basically just what is the first-post.tsx file */}
-      <main>{children}</main>
+      <main className="w-full">{children}</main>
 
-      {/* if on blog post, and not on home and not on work   */}
+      {/* Blog posts are the only pages without a flag */}
       {!blog && !home && !work && !projects && (
-        <div className=" text-xl hover:underline text-blue-500">
+        <div className="text-xl hover:underline text-blue-700">
           <Link href="/posts/blog">
             <a>← Back to blog</a>
           </Link>
         </div>
       )}
 
-      {/* if not on home, show the following at the bottom of the page */}
       {!home && (
-        <div className="pb-8 pt-4 text-xl hover:underline text-blue-500">
+        <div className="pb-8 pt-4 text-xl hover:underline text-blue-700">
           <Link href="/">
             <a>← Back to home</a>
           </Link>

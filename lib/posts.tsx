@@ -7,93 +7,46 @@ import html from "remark-html";
 const postsDirectory = path.join(process.cwd(), "posts");
 
 export const getSortedPostsData = () => {
-  // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
-    // Remove ".md" from file name to get id
-    const id: string = fileName.replace(/\.md$/, "");
+    const id = fileName.replace(/\.md$/, "");
+    const fileContents = fs.readFileSync(
+      path.join(postsDirectory, fileName),
+      "utf8"
+    );
 
-    // Read markdown file as string
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
+    // gray-matter parses the front matter (title, date) at the top of each post
+    const { data } = matter(fileContents);
 
-    // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
-
-    const data = matterResult.data;
-    // const title: string = data.title;
-    // const date: string = data.date;
-
-    // Combine the data with the id
-    return {
-      id,
-      // title,
-      // date,
-      data,
-    };
+    return { id, data };
   });
 
-  return allPostsData.sort((a, b) => {
-    if (a.data.date < b.data.date) {
-      return 1;
-    } else if (a.data.date > b.data.date) {
-      return -1;
-    } else {
-      return 0;
-    }
-  });
+  // Newest first
+  return allPostsData.sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
 };
 
 export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDirectory);
 
-  // Returns an array that looks like this:
-  // [
-  //   {
-  //     params: {
-  //       id: 'ssg-ssr'
-  //     }
-  //   },
-  //   {
-  //     params: {
-  //       id: 'pre-rendering'
-  //     }
-  //   }
-  // ]
-
-  return fileNames.map((fileName) => {
-    return {
-      params: {
-        id: fileName.replace(/\.md$/, ""),
-      },
-    };
-  });
+  return fileNames.map((fileName) => ({
+    params: {
+      id: fileName.replace(/\.md$/, ""),
+    },
+  }));
 }
 
-// NOTE TO FIONN:
-
-// Figure out how to define what tyoe ID is here
 export async function getPostData(id: string) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
-  // Use gray-matter to parse the post metadata section
-  const matterResult = matter(fileContents);
+  const { data, content } = matter(fileContents);
 
-  const data = matterResult.data;
+  const processedContent = await remark().use(html).process(content);
+  const contentHtml = processedContent.toString();
 
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
-
-  const contentHtml: string = processedContent.toString();
-
-  // Combine the data with the id
   return {
     id,
     contentHtml,
     data,
   };
 }
-
-// export default getAllPostIds;

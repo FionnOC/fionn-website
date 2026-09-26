@@ -1,23 +1,27 @@
 import Head from "next/head";
-import Layout from "../../components/Layout";
 import Link from "next/link";
+import Layout from "../../components/Layout";
 
 export default function Projects() {
   return (
     <Layout projects>
       <Head>
-        <title>Projects</title>
+        <title>Projects – Fionn O&apos;Connor</title>
       </Head>
       <h1 className="text-2xl leading-normal font-bold font-sans py-4 text-center">
         Projects
       </h1>
-      <div>
-        <h4 className="pb-4 font-semibold text-xl">
+
+      <div className="py-4">
+        <h2 className="pb-4 font-semibold text-xl">
           PartyBot: IoT Speech-Recognition Party Game
-        </h4>
-        <br />
-        <br />
-        <ul className="text-lg list-disc">
+        </h2>
+        <Link href="/posts/projects/partybot">
+          <a className="text-xl hover:underline text-blue-700">
+            My contribution
+          </a>
+        </Link>
+        <ul className="text-lg list-disc pt-4">
           <li>
             A device that listens to conversation, detects banned words using
             on-device speech recognition, then sounds an alarm and points at
@@ -39,11 +43,11 @@ export default function Projects() {
           </li>
         </ul>
       </div>
-      <br />
-      <div>
-        <h4 className="pb-4 font-semibold text-xl">
+
+      <div className="py-4">
+        <h2 className="pb-4 font-semibold text-xl">
           Masters Research: Humour Perception using EEG
-        </h4>
+        </h2>
         <ul className="text-lg list-disc">
           <li>
             Studied the neurophysiology of humour perception using EEG and
@@ -56,9 +60,9 @@ export default function Projects() {
           </li>
         </ul>
       </div>
-      <br />
-      <div>
-        <h4 className="pb-4 font-semibold text-xl">FurniShare</h4>
+
+      <div className="py-4">
+        <h2 className="pb-4 font-semibold text-xl">FurniShare</h2>
         <ul className="text-lg list-disc">
           <li>
             Led a team of 22 engineers developing a second-hand furniture
@@ -70,10 +74,14 @@ export default function Projects() {
           </li>
         </ul>
       </div>
-      <br />
-      <div>
-        <h4 className="pb-4 font-semibold text-xl">Weather Application</h4>
-        <ul className="text-lg list-disc">
+
+      <h2 className="text-xl leading-normal font-bold font-sans pt-8 pb-2 text-center">
+        Earlier Student Projects
+      </h2>
+
+      <div className="py-4">
+        <h3 className="pb-4 font-semibold text-lg">Weather Application</h3>
+        <ul className="list-disc">
           <li>
             Created a Weather App which advises users on weather and air quality
             conditions for the coming 5 days, advises on clothes to wear/pack
@@ -84,10 +92,10 @@ export default function Projects() {
           </li>
         </ul>
       </div>
-      <br />
-      <div>
-        <h4 className="pb-4 font-semibold text-xl">Dublin Bikes Application</h4>
-        <ul className="text-lg list-disc">
+
+      <div className="py-4">
+        <h3 className="pb-4 font-semibold text-lg">Dublin Bikes Application</h3>
+        <ul className="list-disc">
           <li>
             Created a Dublin Cycling App, which shows user location, and the
             public bikes available to the user, directions can be requested to a
@@ -101,19 +109,18 @@ export default function Projects() {
           </li>
         </ul>
       </div>
-      <br />
-      <div>
-        <h4 className="pb-4 font-semibold text-xl">
+
+      <div className="py-4">
+        <h3 className="pb-4 font-semibold text-lg">
           Teaching Morse Code via Game using Pi Pico and ARM Assembly
-        </h4>
-        <Link href="https://drive.google.com/file/d/1iUPKXk5Ci0WRTKb8-vNAySn2O84ZSWW-/view?usp=sharing">
-          <a className="text-xl hover:underline text-blue-500 pt-4">
-            Video of Demonstration
-          </a>
-        </Link>
-        <br />
-        <br />
-        <ul className="text-lg list-disc">
+        </h3>
+        <a
+          href="https://drive.google.com/file/d/1iUPKXk5Ci0WRTKb8-vNAySn2O84ZSWW-/view?usp=sharing"
+          className="hover:underline text-blue-700"
+        >
+          Video of Demonstration
+        </a>
+        <ul className="list-disc pt-4">
           <li>
             <strong>Tools Used:</strong> C, ARM Assembly, Raspberry Pi Pico,
             Doxygen

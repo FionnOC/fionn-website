@@ -1,11 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
-
-// "devDependencies": {
-//   "@tailwindcss/typography": "^0.5.2",
-// }
 
 module.exports = {
   content: [
@@ -38,9 +33,7 @@ module.exports = {
       yellow: colors.yellow,
       emerald: colors.emerald,
       indigo: colors.indigo,
-      yellow: colors.yellow,
       pink: colors.pink,
-
       blue: colors.blue,
 
       gray: {
